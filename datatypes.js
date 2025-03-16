@@ -37,4 +37,24 @@ let str3 = str1 + " " + str2;
 
 let count = 100;
 count ++;
-console.log(count);
+// console.log(count);
+
+// console.log("2">1);
+// console.log("2" ===1);
+
+// refernce types 
+// Arrays, Objects, Functions
+
+const num = [1,2,3,4,5];
+
+let myObj = {
+    name: "jay",
+    age: 25
+}
+
+const myFun = function(){
+ console.log("hello");
+}
+
+console.log(myFun);
+console.log(myObj);
