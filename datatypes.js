@@ -14,3 +14,10 @@ let isApproved = true;
 //object
 
 console.log(typeof name);
+
+let score = "100";
+
+console.log(typeof score);
+
+let valueInNumber = Number(score);
+console.log(typeof valueInNumber); // conversion string to number 
