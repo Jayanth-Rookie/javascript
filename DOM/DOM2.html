@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #000; color:blueviolet">
+    <ul class="languages">
+        <li>JS</li>
+    </ul>
+
+    
+</body>
+<script>
+   function addLanguage(lang){
+         const li = document.createElement('li')
+         li.innerHTML = `${lang}`
+         document.querySelector('.languages')
+         .appendChild(li)
+   }
+   addLanguage("phyton")
+   addLanguage("c++")
+
+   function apt(lang){
+         const li = document.createElement('li')
+         li.appendChild(document.createTextNode(lang))
+         document.querySelector('.languages').appendChild(li)
+   }
+    apt("hi")
+
+    //Edit
+
+    const hu = document.querySelector('li:nth-child(2)')
+
+    const hm =  document.createElement('li')
+    hm.textContent = "Java"
+    hu.replaceWith(hm)
+
+    const Slang = document.querySelector("li:first-child")
+    Slang.outerHTML = '<li>fdd</li>'
+
+    //remove
+
+    const lLang = document.querySelector('li:first-child')
+    lLang.remove()
+
+</script>
+</html>
