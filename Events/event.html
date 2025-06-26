@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo List with UL & LI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 50px auto;
+            width: 80%;
+        }
+        li {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        img {
+            width: 150px;
+            height: 100px;
+            border-radius: 8px;
+        }
+        .photo-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .photo-id {
+            color: #555;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Photo Gallery List</h1>
+
+    <ul id="image">
+        <li id="photo1">
+            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea" alt="Video Editing Setup">
+            <div class="photo-info">
+                <strong>Video Editing Setup</strong>
+                <div class="photo-id">ID: photo1</div>
+            </div>
+        </li>
+        <li id="photo2">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="IoT Project">
+            <div class="photo-info">
+                <strong>IoT Project</strong>
+                <div class="photo-id">ID: photo2</div>
+            </div>
+        </li>
+        <li id="photo3">
+            <img src="https://images.unsplash.com/photo-1581092795360-1a9c45fba50c" alt="Arduino Setup">
+            <div class="photo-info">
+                <strong>Arduino Setup</strong>
+                <div class="photo-id">ID: photo3</div>
+            </div>
+        </li>
+        <li id="photo4">
+            <img src="https://images.unsplash.com/photo-1563245372-ec8b85b5ebf5" alt="Hackathon Coding">
+            <div class="photo-info">
+                <strong>Hackathon Coding</strong>
+                <div class="photo-id">ID: photo4</div>
+            </div>
+        </li>
+        <li id="photo5">
+            <img src="https://images.unsplash.com/photo-1595475207225-3ed2739f4c58" alt="Gym Workout">
+            <div class="photo-info">
+                <strong>Gym Workout</strong>
+                <div class="photo-id">ID: photo5</div>
+            </div>
+        </li>
+    </ul>
+
+</body>
+
+<script>
+    
+   
+
+document.querySelector('#image').addEventListener('click',function(e)
+{
+    console.log(e.target.tagName)
+    if(e.target.tagName === 'IMG')
+{
+    let remove = e.target.parentNode
+
+    remove.remove()
+}
+    // remove.parentNode.removeChild(remove)
+})
+</script>
+</html>
+
+
+// document.getElementById('photo1').onclick = function(){
+    //     alert('You clciked');
+    // }
+
+    // document.getElementById('photo1').addEventListener('click',function(e){
+    //     console.log("click indide photo1")
+    //     }, false)
+    // document.getElementById('photo1').addEventListener('click',function(e){
+    //     console.log("clicked")
+    //     }, false)
+// inside to out -- - propagation
+
+        // type,timestamp,defaultPrevented
+        //target, toElement, srcElement
+        //clientX, clientY, offsetX, offsetY
+        //altKey, ctrlKey, shiftKey, metaKey
+
+        // document.getElementById('photo2').addEventListener('click',function (e){
+        //     e.preventDefault()
+        //     console.log("clciked")
+
+        // }, false)
